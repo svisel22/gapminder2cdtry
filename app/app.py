@@ -14,12 +14,9 @@ cache_dir = 'cache_directory'
 memory = Memory(cache_dir, verbose=0)
 
 # Example: Display a table with the cached data
+cached_data = data_processing()
 st.table(cached_data)
-df = st.table(cached_data)
-
-
-# Read the merged dataframe
-#df = data_processing()
+df = cached_data
 
 # Year slider
 df_year_min = df['year'].min()

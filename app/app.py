@@ -9,8 +9,8 @@ st.title('Gapminder')
 st.write("Unlocking Lifetimes: Visualizing Progress in Longevity and Poverty Eradication")
 
 # Example: Display a table with the cached data
-#st.table(cached_data)
-#df = st.table(cached_data)
+st.table(cached_data)
+df = st.table(cached_data)
 
 
 # Read the merged dataframe

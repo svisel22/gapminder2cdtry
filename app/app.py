@@ -3,18 +3,23 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 from process_data import data_processing
+from joblib import Memory
 
 st.title('Gapminder')
 
 st.write("Unlocking Lifetimes: Visualizing Progress in Longevity and Poverty Eradication")
 
+# Configure the cache directory
+cache_dir = 'cache_directory'
+memory = Memory(cache_dir, verbose=0)
+
 # Example: Display a table with the cached data
-#st.table(cached_data)
-#df = st.table(cached_data)
+st.table(cached_data)
+df = st.table(cached_data)
 
 
 # Read the merged dataframe
-df = data_processing()
+#df = data_processing()
 
 # Year slider
 df_year_min = df['year'].min()

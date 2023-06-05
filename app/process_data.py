@@ -29,7 +29,7 @@ def data_processing():
     return merged_df
 
 # Call the function to process the data (results will be cached)
-#result_df = data_processing()
+result_df = data_processing()
 
 # Print the cached dataframe
 #print(result_df.head())
